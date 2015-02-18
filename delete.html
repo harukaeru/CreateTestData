@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript">
+function deleteTag(name) {
+	document.getElementById(name).style.display = "none";
+}
+
+function showTag(name) {
+	document.getElementById(name).style.display = "inline";
+}
+
+</script>
+<body>
+<input type="text" id="id_num" />
+<button onclick="deleteTag(id_num.value);">Delete</button>
+<button onclick="showTag(id_num.value);">Show</button>
+<br />
+<div id="1">1番目</div>
+<div id="2">2番目</div>
+<div id="3">3番目</div>
+</body>
+</html>
