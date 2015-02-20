@@ -1,9 +1,13 @@
-if (test $# -lt 1) ; then
-	echo "何番までソートするか入力してください"
-else
+# 拡張子
+ext=jpg
+
+# もし引数が１個じゃなかったらメロスする
+if (test $# -eq 1) ; then
 	for i in `seq 1 $1`
 	do
 		num=`printf %06d $i`
-		mv $i.jpg File_$num.jpg
+		mv $i.$ext File_$num.$ext
 	done
+else
+	echo "使い方がおかしいです！"
 fi
