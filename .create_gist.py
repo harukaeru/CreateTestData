@@ -8,7 +8,7 @@ import os
 # lay the file in your favorite path, like /path/to/
 # create alias in your shell like the following.
 #
-# alias gistc='python /path/to/.create_gist.py' >> ~/.bashrc
+# alias gistc='python /path/to/.create_gist.py' >> .bashrc
 #
 # Now you can just type "gistc" when it is created by this script.
 
@@ -67,7 +67,7 @@ if len(sys.argv) <= 1:
             isIgnoreFile |= filename.endswith(ext)
 
         if not isIgnoreFile:
-            print getTag(os.path.join(src_link, filename))
+            print getTag(os.path.join(src_link + sub_directory + '/' + filename))
     exit()
 elif len(sys.argv) > 2:
     print "Arguments are too much."
